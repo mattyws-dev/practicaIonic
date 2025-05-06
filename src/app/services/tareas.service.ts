@@ -40,4 +40,9 @@ export class TareasService {
       this.lista = []
     }
   }
+
+  eliminarLista(lista:Lista){
+    this.lista = this.lista.filter(item => item.id != lista.id)
+    this.guardarLista()
+  }
 }

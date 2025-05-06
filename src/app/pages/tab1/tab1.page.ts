@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel, IonFab, IonFabButton, IonIcon } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonFab, IonFabButton, IonIcon} from '@ionic/angular/standalone';
 import { AlertController } from '@ionic/angular/standalone';
 import { TareasService } from 'src/app/services/tareas.service';
+import { ListaTareasComponent } from "../../components/lista-tareas/lista-tareas.component";
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
-  imports: [IonIcon, IonFabButton, IonFab, IonLabel, IonItem, IonList, IonHeader, IonToolbar, IonTitle, IonContent, CommonModule],
+  imports: [IonIcon, IonFabButton, IonFab, IonHeader, IonToolbar, IonTitle, IonContent, CommonModule, ListaTareasComponent],
 })
 export class Tab1Page {
 
@@ -50,5 +51,6 @@ export class Tab1Page {
     
 
   }
+
 
 }

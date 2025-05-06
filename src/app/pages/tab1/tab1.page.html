@@ -1,5 +1,5 @@
-<ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
+<ion-header [translucent]="true" class="ion-no-border" >
+  <ion-toolbar color="primary">
     <ion-title>
       Pendientes
     </ion-title>
@@ -7,19 +7,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-  <ion-list>
-    <ion-item 
-    *ngFor="let item of _tareasService.lista"
-    detail
-    >
-      <ion-label>{{ item.titulo }}</ion-label>
-    </ion-item>
-  </ion-list>
+  
+  <app-lista-tareas 
+  [completada]="false">
+  </app-lista-tareas>
 
   <ion-fab  slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button (click)="agregarTarea()">
-      <ion-icon name="square"></ion-icon>
+      <ion-icon name="add-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
